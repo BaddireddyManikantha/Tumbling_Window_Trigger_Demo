@@ -1,0 +1,28 @@
+{
+	"name": "SqlServerLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "MANI\\SQLEXPRESS",
+			"database": "RETAIL_TRANSACTIONS",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "mani",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sql-server"
+			}
+		},
+		"connectVia": {
+			"referenceName": "selfhost",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

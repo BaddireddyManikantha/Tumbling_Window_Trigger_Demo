@@ -1,0 +1,74 @@
+{
+	"name": "SqlServerTableDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Transaction_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Customer_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Product",
+				"type": "varchar"
+			},
+			{
+				"name": "Total_Items",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "Total_Cost",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Payment_Method",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Store_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Discount_Applied",
+				"type": "bit"
+			},
+			{
+				"name": "Customer_Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Season",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Promotion",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Retail_Transactions"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

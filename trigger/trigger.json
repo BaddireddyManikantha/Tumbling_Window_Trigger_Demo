@@ -1,0 +1,30 @@
+{
+	"name": "trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "sql_to_adls",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"starttime": "@trigger().outputs.windowStartTime",
+				"endtime": "@trigger().outputs.windowEndTime"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Month",
+			"interval": 12,
+			"startTime": "2020-01-01T00:00:00Z",
+			"endTime": "2024-05-18T11:59:00Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

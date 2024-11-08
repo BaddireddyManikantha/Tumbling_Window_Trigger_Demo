@@ -1,0 +1,9 @@
+{
+	"name": "tubling-window-factory",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "db47c835-8eb1-4b31-ab13-35a71a2765bb",
+		"tenantId": "7016ddf1-3b4e-49ba-ac65-7f43294f82f5"
+	}
+}
