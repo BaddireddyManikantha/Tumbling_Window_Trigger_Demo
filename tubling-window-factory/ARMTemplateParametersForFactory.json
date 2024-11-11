@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "tubling-window-factory"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://tumblingwindowlake.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"value": "https://tumbling-window-secrets.vault.azure.net/"
+		},
+		"SqlServerLS_properties_typeProperties_server": {
+			"value": "MANI\\SQLEXPRESS"
+		},
+		"SqlServerLS_properties_typeProperties_database": {
+			"value": "RETAIL_TRANSACTIONS"
+		},
+		"SqlServerLS_properties_typeProperties_userName": {
+			"value": "mani"
+		},
+		"trigger_properties_pipeline_parameters_starttime": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"trigger_properties_pipeline_parameters_endtime": {
+			"value": "@trigger().outputs.windowEndTime"
+		}
+	}
+}
